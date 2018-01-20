@@ -1,0 +1,29 @@
+_push_monarch_complete()
+{
+  local cur prev
+
+  COMPREPLY=()
+  cur=${COMP_WORDS[COMP_CWORD]}
+  prev=${COMP_WORDS[COMP_CWORD-1]}
+
+  if [ $COMP_CWORD -eq 1 ]; then
+    #echo "1" >& 2
+    if  [[ "$cur" == -* ]]; then
+      #COMPREPLY=( $(compgen -w "-") )
+      echo "1a" >& 2
+      COMPREPLY=""
+    else
+    #  echo "1b" >& 2
+      _filedir '!*.sql'
+    fi
+  elif [[ "$prev" == -* ]] ; then
+    #echo "2" >& 2
+    _filedir '*.sql'
+  elif [ $COMP_CWORD -gt 1 ]; then
+    #echo "3 $prev" >& 2
+    _known_hosts
+  fi
+
+  return 0
+}
+complete -F _push_monarch_complete push_monarch.sh

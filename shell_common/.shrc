@@ -1,0 +1,8 @@
+[[ -s "${HOME}/.sh/aliases.sh" ]] && source "${HOME}/.sh/aliases.sh" ]
+[[ -s "${HOME}/.sh/variables.sh" ]] && source "${HOME}/.sh/variables.sh"
+[[ -s "${HOME}/.sh/functions.sh" ]] && source "${HOME}/.sh/functions.sh"
+if [[ "$(uname -s)" == 'Darwin' ]]; then
+    [[ -s "${HOME}/.sh/macos.sh" ]] && source "${HOME}/.sh/macos.sh"
+fi
+# set_tab_title declared in ~/.sh/functions.sh
+set_tab_title "$(hostname -s)"
