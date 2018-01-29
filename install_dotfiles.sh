@@ -10,3 +10,11 @@ stow --target=${HOME} ruby
 stow --target=${HOME} shell_common
 stow --target=${HOME} vim
 stow --target=${HOME} zsh
+
+# symlink ~/.local to ./local
+if [[ ! -L "./local" ]]; then
+    if [[ -e "./local" ]]; then
+        echo "WARNING: local directory exists but is not a link"
+    fi
+    ln -s "${HOME}/.local/" "./local"
+fi
