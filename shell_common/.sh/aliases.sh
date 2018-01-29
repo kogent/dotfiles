@@ -1,5 +1,5 @@
 # ls
-# unalias ls
+unalias ls
 if [ -f /usr/local/opt/coreutils/libexec/gnubin/ls ]; then
     alias ls='/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto'
 else

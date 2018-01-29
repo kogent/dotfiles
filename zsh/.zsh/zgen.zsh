@@ -14,7 +14,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/z
   # zgen load zsh-users/zsh-syntax-highlighting
   zgen load zdharma/fast-syntax-highlighting
-  zgen load zsh-users/zsh-history-substring-search
+  # zgen load zsh-users/zsh-history-substring-search
   zgen load zsh-users/zsh-completions src
   zgen load bhilburn/powerlevel9k powerlevel9k
   zgen load MichaelAquilina/zsh-emojis
@@ -22,7 +22,7 @@ if ! zgen saved; then
   zgen load iam4x/zsh-iterm-touchbar
   zgen load zpm-zsh/autoenv
   zgen load andrewferrier/fzf-z  
-  zgen load blimmer/zsh-aws-vault-master
+  zgen load blimmer/zsh-aws-vault
   zgeb load iam4x/zsh-iterm-touchbar
   # generate the init script from plugins above
   zgen save

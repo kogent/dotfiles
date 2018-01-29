@@ -1,8 +1,18 @@
-[[ -s "${HOME}/.sh/aliases.sh" ]] && source "${HOME}/.sh/aliases.sh" ]
+[[ -s "${HOME}/.zsh/config.sh" ]] && source "${HOME}/.zsh/config.sh"
+[[ -s "${HOME}/.zsh/init.sh" ]] && source "${HOME}/.zsh/init.sh"
 [[ -s "${HOME}/.sh/variables.sh" ]] && source "${HOME}/.sh/variables.sh"
+[[ -s "${HOME}/.zsh/paths.sh" ]] && source "${HOME}/.zsh/paths.sh"
+[[ -s "${HOME}/.sh/aliases.sh" ]] && source "${HOME}/.sh/aliases.sh"
 [[ -s "${HOME}/.sh/functions.sh" ]] && source "${HOME}/.sh/functions.sh"
 if [[ "$(uname -s)" == 'Darwin' ]]; then
     [[ -s "${HOME}/.sh/macos.sh" ]] && source "${HOME}/.sh/macos.sh"
+elif [[ "$(uname -s)" == 'Linux' ]]; then
+    [[ -s "${HOME}/.sh/linux.sh" ]] && source "${HOME}/.sh/linux.sh"
 fi
-# set_tab_title declared in ~/.sh/functions.sh
+[[ -s "${HOME}/.local/rc.sh" ]] && source "${HOME}/.local/rc.sh"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# set_tab_title declared in ~/.sh/functions.sh 
+# TODO: doesn't work on zsh, might be a theme conflict
 set_tab_title "$(hostname -s)"

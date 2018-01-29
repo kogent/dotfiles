@@ -84,3 +84,12 @@ function sunglasses() {
   echo     " (⌐■_■)     ";   sleep 1;
 
 }
+
+function psmem() { 
+  ps aux | awk '/${1}/i {sum += $6} END { printf "%dMB", sum/1024 }'; 
+}
+
+# TODO linux specific
+function straceall {
+  strace $(pidof "${1}" | sed 's/\([0-9]*\)/-p \1/g')
+}

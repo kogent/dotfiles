@@ -38,6 +38,7 @@ fi
 
 export EDITOR=$(which vim)
 
+
 # Needed for golang
 if [[ -d "${HOME}/dev/go" ]]; then
   export GOPATH="${HOME}/dev/go"

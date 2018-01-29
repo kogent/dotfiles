@@ -1,4 +1,3 @@
-[[ -f "$(brew --prefix)/etc/grc.zsh" ]] && source "$(brew --prefix)/etc/grc.zsh"
 setopt NOMATCH
 
 # AUTO_CD (-J)
@@ -140,3 +139,4 @@ unsetopt INC_APPEND_HISTORY
 unsetopt SHARE_HISTORY
 
 # TODO: what other setopt values are needed here?
+# setopt noglob

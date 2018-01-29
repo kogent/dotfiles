@@ -85,30 +85,9 @@ alias rubies="ruby-build --definitions"
 source "$(brew --prefix)/etc/grc.bashrc"
 
 #alias flushdns="sudo killall -HUP mDNSResponder"
-#alias vf="veewee fusion"
-#alias govf="cd /Volumes/Data\ 2/dev/vm;rvm use 1.9.2@veewee"
-
-#alias mvim="DYLD_FORCE_FLAT_NAMESPACE=1 mvim"
-#alias vim="DYLD_FORCE_FLAT_NAMESPACE=1 /Applications/MacVim.app/Contents/MacOS/Vim"
-alias mvim="DYLD_FORCE_FLAT_NAMESPACE=1 mvim"
-#alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 export HISTFILE=~/.bash-history-${ITERM_SESSION_ID%:*}
 
-alias wakedell="wakeonlan 00:1a:a0:22:54:20"
 alias screen=tmux
-alias report="pushd ~/dev/gw/gwcm-client && bin/get_resolved_issues.rb -r; popd"
-#alias vim="vim -v"
-alias vim="vim -X"
-alias flushnetperms="sudo /usr/bin/dscacheutil -flushcache && sudo /usr/bin/dsmemberutil flushcache && sudo killall Finder"
-
-function dockerenv() {
-  $(boot2docker shellinit)
-}
-
-function startdocker() {
-  boot2docker up
-  dockerenv
-}
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+# iterm2 shell integration tools
+[[ -e "${HOME}/.iterm2_shell_integration.bash" ]] && source "${HOME}/.iterm2_shell_integration.bash"
