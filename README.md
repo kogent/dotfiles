@@ -13,6 +13,7 @@ For things that should not be commited to the repo you can put them into $HOME/.
     ```apt -y install stow```
 * git
 * zsh
+    * zgen
 * ruby
     * rvm
 * python
@@ -43,3 +44,9 @@ Using Vundle for loading of plugins
 
 # python
 .pythonrc is not loaded by default and needs to be pointed to in a PYTHONSTARTUP env var. (See shell_common/.sh/variables.sh)
+
+# .local
+each of the shell rc files will source ~/.local/$SHELL.rc.  Anything that is machine specific should go in here.  These changes will not be saved in the git repo.
+
+# os specific
+Anything that OS platform specific that should be preserved should go in a $OS.$SHELL file.  eg- mac zsh settings should go in macos.zsh.
