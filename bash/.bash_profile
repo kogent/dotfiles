@@ -15,3 +15,7 @@ fi
 [[ -s "${HOME}.local/rc.bash" ]] && source "${HOME}/.local/rc.bash"
 
 
+
+complete -C /usr/local/bin/vault vault
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
