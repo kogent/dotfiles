@@ -7,10 +7,11 @@
 # rationalize-path cdpath
 
 # # Path to search for autoloadable functions.
-fpath=(/usr/local/share/zsh-completions ${HOME}/.zsh/functions.zsh $fpath)
+fpath=(/usr/local/share/zsh-completions ${HOME}/.zsh/functions.zsh /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions $fpath)
 # fpath=( $HOME/lib/zsh/func "$fpath[@]" )
 export FPATH
-# # Only unique entries please.
+# # Only unique entries please.                                               
+
 typeset -U fpath
 rationalize-path fpath
 
@@ -27,7 +28,7 @@ path=(
   /usr/local/opt/gnu-tar/libexec/gnubin
   /usr/local/bin
   /usr/local/sbin
-  /Users/mcarey/Library/Python/3.6/bin
+  /Users/mcarey/Library/Python/3.7/bin
   /Users/mcarey/Library/Python/2.7/bin
   /sbin
   /bin
@@ -88,31 +89,3 @@ fi
 
 # paths to search for info command
 export INFOPATH=/usr/local/share/info:/usr/share/info
-
-# less options.
-if [[ ${+LESS} -eq 0 ]]
-then
-  export LESS='-R'
-  # Underline non-printable characters and print them in hex
-  # inside square brackets.
-  export LESSBINFMT='*u[%X]'
-  export LESSCHARSET=latin1
-fi
-
-# default pager
-if [[ ${+PAGER} -eq 0 ]]
-then
-  if whence less >/dev/null 2>&1
-  then
-    export PAGER="`whence less`"
-  fi
-fi
-
-# default editor
-if [[ ${+EDITOR} -eq 0 ]]
-then
-  if whence vim >/dev/null 2>&1
-  then
-    export EDITOR="`whence vim`"
-  fi
-fi
