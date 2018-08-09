@@ -1,0 +1,54 @@
+cask_args appdir: "/Applications"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "buo/cask-upgrade"
+tap "chef/chef"
+
+brew "git"
+brew "coreutils"
+brew "findutils"
+brew "rbenv"
+brew "pyenv"
+brew "go"
+brew "bash"
+brew "zsh"
+brew "stow"
+brew "mas"
+brew "grc"
+brew "wget"
+brew "cmake"
+brew "openssh"
+brew "zlib"
+brew "tmux"
+
+cask "1password"
+cask "1password-cli"
+cask "iterm2"
+cask "alfred"
+cask "dash"
+cask "docker"
+cask "keybase"
+cask "textmate"
+cask "visual-studio-code"
+cask "istat-menus"
+cask "font-inconsolata-nerd-font"
+cask "chefdk"
+cask "wireshark"
+
+cask "google-chrome"
+cask "firefox"
+cask "slack"
+cask "mailplane"
+
+mas "Browser Fairy", id: 483014855
+mas "JSON Helper for AppleScript", id: 453114608
+mas "Location Helper for AppleScript", id: 488536386
+mas "FileBot", id: 905384638
+mas "Right Click Booster", id: 970432740
+mas "Textual 7", id: 1262957439
+mas "Evernote – stay organized", id: 406056744
+# mas "EverTool - Markdown Evernote", id: 1396383432
+mas "2Do", id: 477670270
+mas "Pixelmator", id: 407963104
+mas "LaunchD Task Schduler", id: 620249105
+mas "Monosnap - screenshot editor", id: 540348655
