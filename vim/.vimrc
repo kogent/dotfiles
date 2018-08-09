@@ -1,6 +1,10 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+if has('python3')
+ silent! python3 1
+endif
+
 set rtp+=~/.vim/bundle/Vundle.vim/
 "call vundle#rc()
 call vundle#begin()
