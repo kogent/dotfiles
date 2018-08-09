@@ -18,10 +18,10 @@ export SKYPEUSERNAME="kogentmark"
 #	eval `/usr/libexec/path_helper -s`
 #fi
 
-export PATH=~/bin:~/dev/oss/golang/bin:~/.gem/ruby/1.8/bin:~/.ssh/argv0:$PATH  #:/opt/local/bin:/opt/local/sbin:/opt/local/libexec/gnubin:$PATH:~/.ssh/argv0:/opt/local/libexec/perl5.12/sitebin/:/usr/local/go/bin
+export PATH="~/bin:~/dev/oss/golang/bin:~/.gem/ruby/1.8/bin:~/.ssh/argv0:$PATH"
 # gnu path
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 #export GEM_HOME=/opt/local/lib/ruby/gems/1.8
 export GOPATH="${HOME}/dev/go"
 export PATH="${GOPATH}/bin:$PATH"
@@ -67,8 +67,8 @@ alias portupo="sudo port upgrade outdated"
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 #chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+[[ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ]] && source /usr/local/opt/chruby/share/chruby/chruby.sh
+[[ -s "/usr/local/opt/chruby/share/chruby/auto.sh" ]] && source /usr/local/opt/chruby/share/chruby/auto.sh
 rbi() {
   version="${1}"
   ruby-build "${version}" ~/.rubies/"${version}"
