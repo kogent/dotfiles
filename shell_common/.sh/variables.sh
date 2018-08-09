@@ -36,7 +36,7 @@ if [[ -f "/Applications/Firefox.app/Contents/MacOS/firefox" ]]; then
   export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
 fi
 
-export EDITOR=$(which vim)
+# export EDITOR=$(which vim)
 
 
 # Needed for golang
@@ -45,3 +45,10 @@ if [[ -d "${HOME}/dev/go" ]]; then
 elif [[ -d "${HOME}/go" ]]; then
   export GOPATH="${HOME}/go"
 fi
+
+# FIXME: only run if docker-machine is present
+# if [ "$(docker-machine status)" == "Running" ]; then
+#   eval "$(docker-machine env)"
+# else
+#   echo "docker daemon stopped, run 'dockerboot' to start and set env"
+# fi

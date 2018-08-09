@@ -1,5 +1,4 @@
 # ls
-unalias ls
 if [ -f /usr/local/opt/coreutils/libexec/gnubin/ls ]; then
     alias ls='/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto'
 else
@@ -13,6 +12,7 @@ alias swhich='/usr/bin/which'
 alias less='less -r'
 
 alias rmd160sum="openssl dgst -ripemd160"
+alias ssh="TERM=xterm-256color ssh"
 alias sshexit="ssh -O exit"
 alias get_http_headers="curl -o /dev/null -s -S -D - "
 alias rsync="rsync --progress"
@@ -38,6 +38,5 @@ alias httpdump="echo \"tcpdump -n -s 0 -w - | grep -a -o -E 'Host\: .*|GET \/.*'
 # make ansible output json, requires json callback plugin to be installed and enabled
 alias ansible-json="ANSIBLE_STDOUT_CALLBACK=json ansible"
 
-# yubikey
-alias yubicode="ykman oath code "
-alias yubiaws="yubicode aws"
+alias listening_pots="lsof -Pn -i4"
+
