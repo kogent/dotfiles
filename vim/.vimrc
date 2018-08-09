@@ -31,7 +31,7 @@ Plugin 'robbles/logstash.vim'
 
 Plugin 'junegunn/vim-easy-align'
 Plugin 'matchit.zip'
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 
