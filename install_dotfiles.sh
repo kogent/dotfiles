@@ -17,8 +17,15 @@ stow --target=${HOME} vim
 stow --target=${HOME} zsh
 
 # vim plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+if [[ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]]; then
+	git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+fi
 vim +PluginInstall +qall
+
+# zgen
+if [[ ! -d "${HOME}/.zgen" ]]; then
+	git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+fi
 
 # symlink ~/.local to ./local
 if [[ ! -L "./local" ]]; then
