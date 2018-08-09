@@ -20,6 +20,8 @@ brew "cmake"
 brew "openssh"
 brew "zlib"
 brew "tmux"
+brew "fontforge"
+brew "jq"
 
 cask "1password"
 cask "1password-cli"
@@ -35,11 +37,13 @@ cask "font-inconsolata-nerd-font"
 cask "chefdk"
 cask "wireshark"
 
-cask "google-chrome"
+# cask "goole-chrome"
 cask "firefox"
 cask "slack"
 cask "mailplane"
+cask "logos"
 
+mas "Xcode", id: 497799835
 mas "Browser Fairy", id: 483014855
 mas "JSON Helper for AppleScript", id: 453114608
 mas "Location Helper for AppleScript", id: 488536386
