@@ -47,6 +47,7 @@ function dev() {
 alias yubicode="ykman oath code "
 alias yubiaws="yubicode aws"
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="${HOME}/.rbenv/shims:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 export SSH_AUTH_SOCK=$(launchctl getenv SSH_AUTH_SOCK)

@@ -38,6 +38,8 @@ cask "chefdk"
 cask "wireshark"
 
 # cask "goole-chrome"
+cask "epichrome"
+cask "launchcontrol"
 cask "firefox"
 cask "slack"
 cask "mailplane"
