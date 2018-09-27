@@ -20,6 +20,7 @@ rationalize-path fpath
 # PATH should already be exported, but in case not. . .
 path=(
   "${HOME}/bin/${MACHTYPE}-${OSTYPE}"
+  "${HOME}/.rbenv/shims"
   "${HOME}/bin"
   "${HOME}/.local/bin"
   "${HOME}/.ssh/argv0"
