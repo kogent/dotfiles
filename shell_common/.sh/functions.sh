@@ -174,3 +174,7 @@ dockerstop(){
 8digitpin(){
   shuf -i 0-99999999 -n 1 | xargs printf "%08d\n"
 }
+
+rgless(){
+	rg --color always $@ | less -R
+}
