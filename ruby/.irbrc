@@ -5,7 +5,7 @@ require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
-%w(rubygems colored wirble).each do |gem|
+%w(rubygems colored).each do |gem|
   begin
     require gem
   rescue LoadError
