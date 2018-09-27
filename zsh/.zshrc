@@ -28,4 +28,3 @@ complete -o nospace -C /usr/local/bin/vault vault
 
 #run the import_history alias at the start of a session 
 import_history
-
