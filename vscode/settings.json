@@ -43,8 +43,6 @@
         "FIXME": {}
     },
     "python.jediEnabled": false,
-    "ruby.rubocop.executePath": "/Users/mcarey/.rbenv/shims/",
-    "foodcritic.path": "/Users/mcarey/.rbenv/shims/foodcritic",
     "window.zoomLevel": 2,
     "go.buildOnSave": "off",
     "go.lintOnSave": "off",
