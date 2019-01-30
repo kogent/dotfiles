@@ -7,7 +7,7 @@ getcert() {
 
 # consumed memory of processes matching a pattern
 psmem() {
-  ps aux | awk -v pat="${1}" 'tolower($0) ~ pat {sum += $6} END { printf "%dMB", sum/1024 }'
+  ps aux | awk -v pat="${1}" 'tolower($0) ~ tolower(pat) {sum += $6} END { printf "%dMB", sum/1024 }'
 }
 
 # whois without TOS
