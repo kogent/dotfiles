@@ -26,6 +26,8 @@ path=(
   "${HOME}/.ssh/argv0"
   "${GOPATH}/bin"
   /usr/local/opt/coreutils/libexec/gnubin
+  /usr/local/opt/grep/libexec/gnubin
+  /usr/local/opt/findutils/libexec/gnubin
   /usr/local/opt/gnu-tar/libexec/gnubin
   /usr/local/bin
   /usr/local/sbin
