@@ -16,7 +16,7 @@
 [[ -s "${HOME}/.zsh/functions.zsh" ]] && source "${HOME}/.zsh/functions.zsh"
 
 if [[ "$(uname -s)" == 'Darwin' ]]; then
-    [[ -s "${HOME}/.zsh/macos.zsh" ]] && source "${HOME}/.bash/macos.zsh"
+    [[ -s "${HOME}/.zsh/macos.zsh" ]] && source "${HOME}/.zsh/macos.zsh"
 elif [[ "$(uname -s)" == 'Linux' ]]; then
     [[ -s "${HOME}/.zsh/linux.zsh" ]] && source "${HOME}/.zsh/linux.zsh"
 fi
