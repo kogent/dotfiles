@@ -56,13 +56,19 @@ except NameError:
         # Python 3.3
         from imp import reload  # noqa
 
-del histfile
-del atexit
-del write_history
-del rlcompleter
-del readline
-del readline_doc
-del sys
-del os
+for mod in [
+        histfile,
+        atexit,
+        write_history,
+        rlcompleter,
+        readline,
+        readline_doc,
+        sys,
+        os
+        ]:
+    try:
+        del mod
+    except:
+        pass
 
 
