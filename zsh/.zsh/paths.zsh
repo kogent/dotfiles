@@ -7,7 +7,14 @@
 # rationalize-path cdpath
 
 # # Path to search for autoloadable functions.
-fpath=(/usr/local/share/zsh-completions ${HOME}/.zsh/functions.zsh /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions $fpath)
+fpath=(
+  /usr/local/share/zsh-completions 
+  "${HOME}/.zsh/functions.zsh"
+  /usr/local/share/zsh/site-functions
+  /usr/share/zsh/site-functions
+  /usr/local/share/zsh/functions
+#  $fpath
+)
 # fpath=( $HOME/lib/zsh/func "$fpath[@]" )
 export FPATH
 # # Only unique entries please.                                               
@@ -61,7 +68,7 @@ then
   if whence manpath >/dev/null 2>&1
   then
     # Get the original manpath, then modify it.
-    MANPATH="`manpath`"
+    MANPATH="$(manpath)"
     manpath=(
       "${HOME}/man"
       "${HOME}/usr/share/man"
@@ -91,4 +98,4 @@ then
 fi
 
 # paths to search for info command
-export INFOPATH=/usr/local/share/info:/usr/share/info
+export INFOPATH="/usr/local/share/info:/usr/share/info"

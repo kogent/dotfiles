@@ -14,10 +14,11 @@ if ! zgen saved; then
   # zgen oh-my-zsh plugins/z
   zgen oh-my-zsh plugins/iterm2
 #  # zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zdharma/fast-syntax-highlighting
+  # zgen load zdharma/fast-syntax-highlighting
   # zgen load zsh-users/zsh-history-substring-search
   zgen load zsh-users/zsh-completions src
-  zgen load bhilburn/powerlevel9k powerlevel9k
+  # zgen load bhilburn/powerlevel9k powerlevel9k
+  zgen load romkatv/powerlevel10k powerlevel10k
   # zgen load MichaelAquilina/zsh-emojis
   # zgen load b4b4r07/emoji-cli
   zgen load zpm-zsh/autoenv
