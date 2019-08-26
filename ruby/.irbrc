@@ -13,7 +13,7 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
   end
 end
 
-%w(lib .local/ruby/lib $HOME/irb).each do |lib|
+%w(lib .local/ruby/lib $HOME/.irb).each do |lib|
   $LOAD_PATH << lib
 end
 
