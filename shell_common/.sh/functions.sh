@@ -30,12 +30,12 @@ ec2_get_instanceid_by_tag_name() { aws ec2 describe-instances --output text --fi
 ec2_start_instance_by_tag_name() { aws ec2 start-instances --instance-ids $(ec2_get_instanceid_by_tag_name  "${1}"); }
 ec2_stop_instance_by_tag_name()  { aws ec2 stop-instances  --instance-ids $(ec2_get_instanceid_by_tag_name  "${1}"); }
 ec2_ami_build_state() { aws ec2 describe-images --owner self --filter "Name=tag:Name,Values=${1}" --query "Images[*].State" --output text; }
-ec2_get_password_data() { 
+ec2_get_password_data() {
     instance_id="${1}"
     key_id="${2}"
     aws ec2 get-password-data --instance-id "${instance_id}" --priv-launch-key "${key_id}"
 }
-ec2_get_password_data_by_name() { 
+ec2_get_password_data_by_name() {
     instance_name="${1}"
     key_id="${2}"
     instance_id="$(ec2_get_instanceid_by_tag_name "${instance_name}")"
@@ -47,12 +47,12 @@ ec2_get_password_data_by_name() {
 }
 aws_ssm_run() {
   # TODO vet this function, expecially the $ in the final echo
-  for instance_id in $(aws ec2 describe-instances | jq -r .Reservations[].Instances[].InstanceId); do 
-      echo $'Instance: '${instance_id}; 
-      command_id=$(aws ssm send-command --instance-ids "${instance_id}" --document-name "AWS-RunShellScript" --comment "kernel version" --parameters commands="uname -r" --output text --query "Command.CommandId"); 
-      sleep 5; 
+  for instance_id in $(aws ec2 describe-instances | jq -r .Reservations[].Instances[].InstanceId); do
+      echo $'Instance: '${instance_id};
+      command_id=$(aws ssm send-command --instance-ids "${instance_id}" --document-name "AWS-RunShellScript" --comment "kernel version" --parameters commands="uname -r" --output text --query "Command.CommandId");
+      sleep 5;
       aws ssm list-command-invocations --instance-id "${instance_id}" --command-id "${command_id}" --details  | jq -r '.CommandInvocations[].CommandPlugins[].Output';
-      echo $'----end----\n'; 
+      echo $'----end----\n';
   done
 }
 
@@ -177,4 +177,12 @@ dockerstop(){
 
 rgless(){
 	rg --color always $@ | less -R
+}
+
+function codesearch() {
+  code $(rg $@ | fzf -m | cut -d':' -f1 | sort | uniq)
+}
+
+function vimsearch() {
+  vim $(rg $@ | fzf -m | cut -d':' -f1 | sort | uniq)
 }

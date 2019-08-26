@@ -27,6 +27,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gpb='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 # ssl client
 alias telnets='openssl s_client -connect'
@@ -38,5 +39,8 @@ alias httpdump="echo \"tcpdump -n -s 0 -w - | grep -a -o -E 'Host\: .*|GET \/.*'
 # make ansible output json, requires json callback plugin to be installed and enabled
 alias ansible-json="ANSIBLE_STDOUT_CALLBACK=json ansible"
 
-alias listening_pots="lsof -Pn -i4"
+alias listening_ports="lsof -Pn -i4"
 
+alias urldecode='python3 -c "import sys, urllib.parse as ul;  [print(ul.unquote_plus(l), end=\"\") for l in sys.stdin]"'
+
+if [ -x $(which bat) ]; then alias cat='bat'; fi
