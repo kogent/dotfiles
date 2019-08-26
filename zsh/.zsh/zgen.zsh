@@ -24,7 +24,7 @@ if ! zgen saved; then
   zgen load zpm-zsh/autoenv
   # zgen load andrewferrier/fzf-z
   # zgen load blimmer/zsh-aws-vault
-  zgen load iam4x/zsh-iterm-touchbar
+  # zgen load iam4x/zsh-iterm-touchbar
   # generate the init script from plugins above
   zgen save
 fi
