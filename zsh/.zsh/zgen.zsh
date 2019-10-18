@@ -28,6 +28,6 @@ if ! zgen saved; then
   # generate the init script from plugins above
   zgen save
 fi
-# zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
+# zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 alias zgencfgupdate="zgen reset && echo 'launch a new shell to refresh zgen config'"
