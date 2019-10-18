@@ -38,20 +38,23 @@
     //     "sideBarSectionHeader.foreground": "#bcc3df",
     //     "sideBarTitle.foreground": "#a6b7ff"
     },
-    "todo-tree.defaultHighlight": {
-        "foreground": "green",
-        "type": "none"
-    },
-    "todo-tree.customHighlight": {
-        "TODO": {},
-        "FIXME": {}
-    },
     "python.jediEnabled": false,
     "window.zoomLevel": 0,
     "go.autocompleteUnimportedPackages": true,
     "go.lintOnSave": "file",
     "[go]": {
         "editor.formatOnSave": true
+    },
+    "gopls": {
+        // placeholders for function parameters or struct fields
+        "usePlaceholders": true,
+        // documentation with completion results
+        "completionDocumentation": true,
+        // suggestions for packages that you do not currently import
+        "completeUnimported": true,
+        "deepCompletion": true,
+        // full doc instead of just the first line on hover
+        "hoverKind": "FullDocumentation",
     },
     "files.associations": {
         "*.jsonnet.TEMPLATE": "jsonnet"
@@ -61,5 +64,14 @@
     "workbench.editor.enablePreview": false,
     "gitlens.settings.mode": "advanced",
     "java.configuration.checkProjectSettingsExclusions": false,
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.general.statusBar": "total"
 }
