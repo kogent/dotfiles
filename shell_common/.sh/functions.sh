@@ -186,3 +186,7 @@ function codesearch() {
 function vimsearch() {
   vim $(rg $@ | fzf -m | cut -d':' -f1 | sort | uniq)
 }
+
+function urlencode() {
+  QUERY=; python3 -c "import urllib.parse;print(urllib.parse.quote('${QUERY}'))"
+}
