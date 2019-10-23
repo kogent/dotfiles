@@ -171,7 +171,7 @@ dockerstop(){
   echo "docker-machine status: $(docker-machine status)"
 }
 
-8digitpin(){
+eight_digit_pin(){
   shuf -i 0-99999999 -n 1 | xargs printf "%08d\n"
 }
 
@@ -188,5 +188,5 @@ function vimsearch() {
 }
 
 function urlencode() {
-  QUERY=; python3 -c "import urllib.parse;print(urllib.parse.quote('${QUERY}'))"
+  python3 -c "import urllib.parse;print(urllib.parse.quote('${1}'))"
 }
