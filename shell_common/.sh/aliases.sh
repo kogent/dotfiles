@@ -43,4 +43,4 @@ alias listening_ports="lsof -Pn -i4"
 
 alias urldecode='python3 -c "import sys, urllib.parse as ul;  [print(ul.unquote_plus(l), end=\"\") for l in sys.stdin]"'
 
-if [ -x $(which bat) ]; then alias cat='bat'; fi
+if [ -x "$(which bat)" ]; then alias cat='bat'; fi
