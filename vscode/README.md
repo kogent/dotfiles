@@ -5,13 +5,13 @@
 ### install extensions
 
 ```bash
-./install_extesions.sh
+./install_extensions.sh
 ```
 
 ### save current extensions
 
 ```bash
-code --list extensions > vscode-extensions.list
+code --list-extensions > vscode-extensions.list
 ```
 
 ## TODO: settings.json
