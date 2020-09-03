@@ -73,5 +73,6 @@
         "foreground": "green",
         "type": "none"
     },
-    "todo-tree.general.statusBar": "total"
+    "todo-tree.general.statusBar": "total",
+    "todo-tree.tree.showScanModeButton": false
 }
